@@ -1,0 +1,19 @@
+#catBreeds {
+background-color : yellow;
+}
+
+.catSenses {
+  margin-left: 50px;
+}
+
+img{
+  display: block;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #eb875e;
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
