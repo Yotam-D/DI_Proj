@@ -1,0 +1,59 @@
+body{
+  background-image: url("https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.mainCon{
+  height: 10000px;
+  width: 1200px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.upperFrame{
+  height: 50px;
+  width: 97%;
+  background-color: white;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+div a{
+  color: rgb(41, 41, 41);
+  text-decoration: none;
+  margin: 20px;
+  font-size: 25px;
+}
+div p{
+  position: absolute;
+  margin: 0;
+  top: 190px;
+  left: 270px;
+}
+.picFrame{
+  position: relative;
+  height: 400px;
+  top: 90px;
+  left: 300px;
+}
+
+img{
+  display: block;
+  position: relative;
+  top: 100px;
+  border-radius: 250px;
+  height: 250px;
+  width: 250px;
+}
+*{
+  font-size: 30px;
+}
+
+.bottomFrame{
+  position: absolute;
+  width: 500px;
+  background-color: blue;
+}
