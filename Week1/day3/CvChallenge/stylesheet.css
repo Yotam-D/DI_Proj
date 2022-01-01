@@ -1,9 +1,15 @@
+*{
+  font-family: 'Fredoka One', cursive;
+}
+
+
 body{
   background-image: url("https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
 }
 
 .mainCon{
-  height: 10000px;
+  height: 3000px;
   width: 1200px;
   background-color: white;
   border-radius: 20px;
@@ -27,7 +33,7 @@ div a{
   margin: 20px;
   font-size: 25px;
 }
-div p{
+.picText{
   position: absolute;
   margin: 0;
   top: 190px;
@@ -53,7 +59,36 @@ img{
 }
 
 .bottomFrame{
+  position: relative;
+  top: 40px;
+  width: 1200px;
+}
+
+.bottomPar{
+  display: inline-block;
   position: absolute;
-  width: 500px;
-  background-color: blue;
+  padding: 10px;
+  left: 40px;
+  border: 2px solid rgb(124, 190, 241);
+  border-radius: 5px;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 250%;
+  width: 350px;
+}
+
+.right{
+  left: 700px;
+}
+
+#infoI{
+  position: relative;
+  left: 15px;
+  color: rgb(162, 129, 241);
+}
+
+#guitarI{
+  position: relative;
+  left: 600px;
+  color: rgb(162, 129, 241);
 }
