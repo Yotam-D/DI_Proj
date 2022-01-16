@@ -94,7 +94,7 @@ let details = {
   my: 'name',
   is: 'Rudolf',
   the: 'raindeer'
-}
+};
 let detaiesString = '';
 for (var key in details) {
   detaiesString += `${key} ${details[key]} `
