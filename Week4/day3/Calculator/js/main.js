@@ -20,8 +20,13 @@ function equal(){
 }
 
 
-function clear(){
-  console.log('TBD');
+function clearString(){
+  calString = calString.trim().slice(0,-1).trim();          // trimming before and after deleting last char in case of operator;
+  if (calString.length == 0) {
+    document.getElementById("showString").innerHTML = '0';
+  }else {
+    document.getElementById("showString").innerHTML = calString;
+  }
 }
 
 function reset(){
