@@ -1,0 +1,11 @@
+.screen{
+  font-size: 50px;
+  border: solid black;
+  border-radius: 5px;
+  width: 300px;
+  height: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}

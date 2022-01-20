@@ -34,9 +34,6 @@ function calculateTip(){
 //calling function
 // calculateTip();
 
-
-
-
 //Ex3
 function isDivisible(divisor = 23){
   let sum = 0;
@@ -52,8 +49,6 @@ function isDivisible(divisor = 23){
 // calling function
 // isDivisible();
 // isDivisible(4);
-
-
 
 
 // Ex4
@@ -141,7 +136,6 @@ function rentalCarCost(){
   }
   return rentPrice;
 }
-
 
 function totalVacationCost(){
   let hotelsCost = hotelCost();
