@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <button id="jsstyle">Style</button>
+      <script>
+        let button = document.getElementById('jsstyle');
+        button.addEventListener('click', changeBgColor)
+        console.log(button);
+        function changeBgColor (e) {
+          e.target.style.backgroundColor = 'red';
+        }
+      </script>
+  </body>
+</html>

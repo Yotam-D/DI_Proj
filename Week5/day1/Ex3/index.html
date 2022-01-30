@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <style media="screen">
+      div{border: 5px dashed blue}
+      button{border: 3px solid yellow}
+    </style>
+    <div class="hey">
+      <button id="childB">Heyy</button>
+    </div>
+
+
+      <script>
+        let x = document.querySelector('.hey');
+        let y = document.querySelector('#childB');
+        x.addEventListener('click', changeBgColor)
+        y.addEventListener('mouseover', (e) => console.log(e.type))
+        y.addEventListener('click', (e) => e.target.style.border = '10px solid black')
+        y.addEventListener('dblclick', (e) => alert(`${e.target} Double click!`))
+        function changeBgColor (e) {
+          console.log(e.target);
+          e.target.style.backgroundColor  = 'rgb(99, 126, 20)';
+          // e.stopPropagation();
+        }
+      </script>
+  </body>
+</html>
