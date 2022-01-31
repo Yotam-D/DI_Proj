@@ -27,17 +27,15 @@ console.log(inputLnameByAttribute);
 let submitBtn = document.querySelector('#submit');
 submitBtn.addEventListener('click', putInList);
 
-function putInList(){
-console.log('here');
-let fName = inputFname.value;
-let lName = inputLname.value;
-console.log(fName, lName);
-  if(fName.length > 0 && lName.length > 0)
-    {
-      let li = document.createElement('li');
-      li.innerText = `${fName} ${lName}`;
-      console.log(li);
-      let ul = document.querySelector('ul');
-      ul.appendChild(li);
-    }
+function putInList(e) {
+  e.preventDefault();
+  console.log('here');
+  let fName = inputFname.value;
+  let lName = inputLname.value;
+  if (fName.length > 0 && lName.length > 0) {
+    let li = document.createElement('li');
+    li.innerText = `${fName} ${lName}`;
+    let ul = document.querySelector('ul');
+    ul.appendChild(li);
+  }
 }

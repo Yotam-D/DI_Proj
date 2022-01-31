@@ -15,11 +15,11 @@ pElement.addEventListener('mouseout', return_normal);
 console.log(pElement);
 console.log('here');
 
-function getBold_items () {
+function getBold_items() {
   allBoldItems = document.querySelectorAll('strong')
 }
 
-function highlight () {
+function highlight() {
   console.log('here2');
   getBold_items();
   for (var i = 0; i < allBoldItems.length; i++) {
@@ -27,7 +27,7 @@ function highlight () {
   }
 }
 
-function return_normal (e) {
+function return_normal(e) {
   getBold_items();
   for (var i = 0; i < allBoldItems.length; i++) {
     allBoldItems[i].style.color = 'black';
