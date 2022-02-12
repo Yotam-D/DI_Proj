@@ -1,0 +1,17 @@
+#mainCointainer{
+    background-image: url('./assets/bg.png');
+    background-color: rgb(88, 89, 235);
+    widht: 100vh;
+}
+
+.card{
+  color: white;
+  font-family: 'Rowdies', cursive;
+  border-radius: 30px;
+  background-color: rgb(74, 74, 74);
+  margin: 15px;
+}
+
+.navbar-brand{
+  font-family: 'SEGA LOGO FONT', sans-serif;
+}
