@@ -80,8 +80,7 @@ class Card {
 
   createCard() {
     let newDiv = document.createElement('div')
-    newDiv.classList.add('card')
-    newDiv.classList.add('col-3')
+    newDiv.classList.add('card','col-3')
     let newImage = document.createElement('img')
     newImage.classList.add('card-img-top');
     newImage.src = this.image;
