@@ -1,32 +1,11 @@
-let obj = {};
+let urlStr = window.location.href;
 
-// forEach((item, i) => {
-//
-// });
+try {
+  let obj = Object.fromEntries(urlStr.split('?')[1].split('&').map((e)=> e.split('=')));
+  let myJson = JSON.stringify(obj)
+  document.querySelector('.print').textContent = myJson
+  console.log(myJson);
 
-let inputArr = document.querySelectorAll('input');
-let submitBtn = document.querySelector('#subBtn')
-console.log(submitBtn);
-function updateObject() {
-  console.log(e);
-  inputArr.forEach((item, i) => {
-    if (item.value !== 'Send') {
-      obj[item.name] = item.value;
-      let objJson = JSON.stringify(obj)
-      console.log(objJson);
-    }
-  });
+} catch (error) {
+  console.error(error);
 }
-
-
-
-
-
-// function reqListener () {
-//   console.log(this.responseText);
-// }
-//
-// var oReq = new XMLHttpRequest();
-// oReq.addEventListener("load", reqListener);
-// oReq.open("GET", "http://www.example.org/example.txt");
-// oReq.send();
