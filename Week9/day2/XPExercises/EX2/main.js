@@ -15,8 +15,8 @@ const prom = new Promise((resolve, reject) => {
 // How can you make your promise from part 1 shorter using
 // Promise.resolve() and console.log “success”?
 
+let x = Promise.resolve('sucess2')
 setTimeout(() => {
-  let targetProm = Promise.resolve('Success2')
-    .then(result => console.log(result))
-    .catch(error => console.log(error))
-}, 4000)
+  x.then(result => console.log(result))
+   .catch(err => console.error(err))
+}, 4000);
