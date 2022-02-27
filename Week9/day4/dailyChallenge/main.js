@@ -21,8 +21,6 @@ promiseAll([promise1, promise2, promise3]).then(res => console.log(res))
 // EX2
 let showBtn = document.querySelector('#showB')
 showBtn.addEventListener('click', show)
-
-
 function makeReq() {
   let inputsArr = document.querySelectorAll('input');
   let reqObj = {
@@ -35,7 +33,6 @@ function makeReq() {
   }
   return reqObj;
 }
-
 async function show () {
   let requestObj = makeReq();
   console.log(requestObj);
