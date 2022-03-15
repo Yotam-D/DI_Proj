@@ -1,10 +1,26 @@
-toJs()<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <script type="text/javascript" src="main.js"></script>
+    <form action="">
+      <label for="name">Name</label><br>
+      <input type="text" value = ""><br>
+      <label for="name">Description</label><br>
+      <input type="text" value = ""><br>
+      <label for="name">Start Date</label><br>
+      <input type="datetime-local" value = ""><br>
+      <label for="name">End Date</label><br>
+      <input type="datetime-local" value = ""><br>
+      <!-- <label for="Status">Status</label><br>
+      <input type="checkbox" value = "done?"><br> -->
+      <input type="submit" id="submit" value = "Submit">
+    </form>
+    <button id="clear" onclick="localStorage.clear()">Clear All</button>
+
+
+    <script src="./main.js"></script>
   </body>
 </html>
