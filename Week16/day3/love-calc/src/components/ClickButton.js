@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {handleClick} from '../redux/action'
 
 class ClickButton extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
     render() {
+        // console.log(this.props);
         return (
             <div>
                 <button onClick={this.props.handleClk}> click </button>
@@ -13,4 +16,10 @@ class ClickButton extends Component {
     }
 }
 
-export default ClickButton;
+const mapActionsToProps = (dispatch) => {
+    return {
+        handleClk : () => dispatch(handleClick()),
+    }
+}
+
+export default connect(null, mapActionsToProps)(ClickButton);

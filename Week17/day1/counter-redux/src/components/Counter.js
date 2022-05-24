@@ -1,28 +1,21 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-
+import {add, substract} from '../redux/actions'
 
 class Counter extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             counter: 0 ,
         }
     }
-    // add = () => {
-    //     this.setState({counter:this.state.counter+1})
-    // }
-    substract = () => {
-        this.setState({counter:this.state.counter-1})
-    }
-
 
     render(){
         return(
             <>
                 <div>{this.props.rdxCounter}</div>
-                <button onClick={this.add}>+</button>
-                <button onClick={this.substract}>-</button>
+                <button onClick={this.props.rdxAdd}>+</button>
+                <button onClick={this.props.rdxSubstract}>-</button>
             </>
         )
     }
@@ -30,13 +23,14 @@ class Counter extends Component{
 
 const mapStateToProps = (state) => {
     return{
-      rdxCounter: state.counter,
+      rdxCounter: state.count_reducer.counter,
     }
   }
 
 const mapActionsToProps = (dispatch) => {
     return {
-        add: 
+        rdxAdd: () => dispatch(add()),
+        rdxSubstract: () => dispatch(substract()),
     }
 }
 
