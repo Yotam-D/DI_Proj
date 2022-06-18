@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import axios, { AxiosError } from 'axios'
 
 
 export default function Login(props) {
@@ -16,9 +17,25 @@ export default function Login(props) {
     setMsg('');
   },[]);
 
-  const handleAction = (id)=>{
+  const handleAction = async (id)=>{
     if (id=='Register'){
-      console.log('Register')
+      try{
+        let response = await axios.post('/register',{
+          email,password
+        }, {
+          withCredentials:true,
+          headers : {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type' : 'application/json',
+          }
+        })
+        console.log(response.data)
+        setMsg(response.data.msg)
+      }catch(error){
+        console.log('error', error)
+        setMsg(error.response.data.msg)
+      }
+
     } else if (id == 'Login') {
       console.log('Login')
     }

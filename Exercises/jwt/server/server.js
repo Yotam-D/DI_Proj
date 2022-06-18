@@ -2,10 +2,18 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
-import router from './routes/Users';
+import router from './routes/Users.js';
+import db from './config/Database.js';
 
 dotenv.config();
 const app = express();
+
+try {
+    await db.authenticate();
+    console.log('database connected')
+} catch (error) {
+    console.error('Error', error)
+}
 
 app.use(cors({credentials:true, origin:'http://localhost:3000'}));
 app.use(cookieParser());
